@@ -3,7 +3,7 @@ import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import React, {useState, useEffect} from 'react';
 
-import NavigationBar from './navbar';
+import NavigationBar from '../components/navbar';
 
 const dummy = [
     {date_of_ride: '2022/09/12', number_of_seats: 2, departure_location: 'V7C2X4', school_location: 'V5A1S6'},

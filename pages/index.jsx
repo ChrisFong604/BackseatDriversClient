@@ -4,7 +4,7 @@ import styles from '../styles/Home.module.css'
 import Link from "next/link";
 
 
-import NavigationBar from './navbar';
+import NavigationBar from '../components/navbar';
 import 'bootstrap/dist/css/bootstrap.css'
 import { Nav, Navbar, NavDropdown } from 'react-bootstrap'
 
