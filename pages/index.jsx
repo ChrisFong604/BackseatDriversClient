@@ -22,7 +22,7 @@ export default function Home() {
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
+          Welcome to Backseat Drivers!
         </h1>
 
         <p className={styles.description}>
@@ -31,22 +31,22 @@ export default function Home() {
         </p>
 
         <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h2>Documentation &rarr;</h2>
-            <p>Find in-depth information about Next.js features and API.</p>
+          <a href="/drivers" className={styles.card}>
+            <h2>Drivers (Post Ride) &rarr;</h2>
+            <p>Click here to post a ride!</p>
           </a>
 
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h2>Learn &rarr;</h2>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
+          <a href="/riderProfile" className={styles.card}>
+            <h2>Profile (Rider Profile) &rarr;</h2>
+            <p>Click here to edit your profile!</p>
           </a>
 
           <a
-            href="https://github.com/vercel/next.js/tree/canary/examples"
+            href="/postings"
             className={styles.card}
           >
-            <h2>Examples &rarr;</h2>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
+            <h2>Ride Postings &rarr;</h2>
+            <p>Click here to view all postings!</p>
           </a>
 
           <a
