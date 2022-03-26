@@ -18,6 +18,17 @@ function AllPosting({dummydata}){
                 <div key = {xd.date_of_ride}>
                     <p>{xd.date_of_ride}</p>
                     <p>{xd.number_of_seats}</p>
+                    <iframe
+                        width="450"
+                        height="250"
+                        
+                        
+                        src={`https://www.google.com/maps/embed/v1/directions?key=AIzaSyDXYIKlauR9teuVU4RHWACY6T1x_fPbZFY
+                        &origin= ${xd.departure_location}
+                        &destination= ${xd.school_location}`}
+                        
+                    >
+                    </iframe>
                     <br></br>
                 </div>
             )    
@@ -36,17 +47,7 @@ export default function Postings() {
         <div className={styles.container}>
         <p>THIS PAGE WILL BE TO VIEW ALL LISTINGS</p>
         <AllPosting dummydata = {dummy}/>
-        <iframe
-            width="450"
-            height="250"
-            
-            
-            src={`https://www.google.com/maps/embed/v1/directions?key=AIzaSyDXYIKlauR9teuVU4RHWACY6T1x_fPbZFY
-            &origin= ${origin}
-            &destination= ${destination}`}
-            
-        >
-        </iframe>
+        
         </div>
   )
 }
