@@ -28,7 +28,7 @@ export default function Drivers() {
       </div>
       <form className = {styles.drivers_form} onSubmit={formik.handleSubmit}>
         <label htmlFor='date_of_ride'>Date</label>
-        <input type = 'text' id = 'date_of_ride' name = 'date_of_ride' onChange={formik.handleChange} value={formik.values.date_of_ride}></input>
+        <input type = 'text' id = 'date_of_ride' name = 'date_of_ride' onChange={formik.handleChange} value={formik.values.date_of_ride} placeholder='yyyy/mm/dd'></input>
 
         <label htmlFor="number_of_seats">Number of seats available</label>
         <input type= 'number' id = 'number_of_seats' name = 'number_of_seats' onChange={formik.handleChange} value={formik.values.number_of_seats}/>
@@ -36,8 +36,8 @@ export default function Drivers() {
         <label htmlFor='departure_location'>Location of Departure</label>
         <input type = 'text' id = 'departure_location' name = 'departure_location' onChange={formik.handleChange} value={formik.values.departure_location}/>
         
-        <label htmlFor='school_location'>Date</label>
-        <input type = 'text' id = 'school_location' name = 'school_location' onChange={formik.handleChange} value={formik.values.school_location} placeholder='yyyy/mm/dd'></input>
+        <label htmlFor='school_location'>School Location</label>
+        <input type = 'text' id = 'school_location' name = 'school_location' onChange={formik.handleChange} value={formik.values.school_location}></input>
 
         <button type = 'submit'>Submit</button>
       </form>

@@ -6,7 +6,7 @@ import React, {useState, useEffect} from 'react';
 
 
 export default function Testing() {
-  
+    
   const [origin, setOrigin] = useState('V7C2X4')
   const [destination, setDestination] = useState('SFU+Burnaby')
 
