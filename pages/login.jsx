@@ -7,11 +7,15 @@ export default function Testing() {
   
 
   return (
+
     <div>
-      <Link href="/" passHref>
+      <Link href="/test2" passHref>
           <button >Sign in</button>
       </Link>
       <div>hello</div>
+
+    
+
     </div>
-  )
+  ) 
 }
