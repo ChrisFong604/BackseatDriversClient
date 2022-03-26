@@ -3,6 +3,7 @@ import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import React, {useState, useEffect} from 'react';
 
+import NavigationBar from '../components/navbar';
 
 const dummy = [
     {date_of_ride: '2022/09/12', number_of_seats: 2, departure_location: 'V7C2X4', school_location: 'V5A1S6'},
@@ -13,11 +14,23 @@ const dummy = [
 function AllPosting({dummydata}){
     return (
         <>
+            <NavigationBar/>
             {dummydata.map(xd => 
             (
                 <div key = {xd.date_of_ride}>
                     <p>{xd.date_of_ride}</p>
                     <p>{xd.number_of_seats}</p>
+                    <iframe
+                        width="450"
+                        height="250"
+                        
+                        
+                        src={`https://www.google.com/maps/embed/v1/directions?key=AIzaSyDXYIKlauR9teuVU4RHWACY6T1x_fPbZFY
+                        &origin= ${xd.departure_location}
+                        &destination= ${xd.school_location}`}
+                        
+                    >
+                    </iframe>
                     <br></br>
                 </div>
             )    
@@ -36,17 +49,7 @@ export default function Postings() {
         <div className={styles.container}>
         <p>THIS PAGE WILL BE TO VIEW ALL LISTINGS</p>
         <AllPosting dummydata = {dummy}/>
-        <iframe
-            width="450"
-            height="250"
-            
-            
-            src={`https://www.google.com/maps/embed/v1/directions?key=AIzaSyDXYIKlauR9teuVU4RHWACY6T1x_fPbZFY
-            &origin= ${origin}
-            &destination= ${destination}`}
-            
-        >
-        </iframe>
+        
         </div>
   )
 }
