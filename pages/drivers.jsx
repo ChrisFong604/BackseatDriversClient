@@ -4,8 +4,17 @@ import styles from '../styles/Home.module.css'
 import {useFormik} from 'formik'
 import NavigationBar from '../components/navbar';
 
-export default function Drivers() {
-  
+
+export async function getServerSideProps() {
+  const res = await fetch("http://localhost:5000/api/user")
+  const data = await res.json();
+
+  return { props: { schools: data } };
+}
+
+
+export default function Drivers({schools}) {
+  console.log(schools)
   const formik = useFormik({
 
     initialValues: {
@@ -16,6 +25,16 @@ export default function Drivers() {
     },
     onSubmit: values => {
       console.log('Form data', values)
+    },
+    validate: values => {
+      let errors = {}
+      if (!values.date_of_ride){
+        errors.date_of_ride = 'Required'
+      }
+      if (!values.number_of_seats){
+        errors.number_of_seats = 'Required'
+      }
+
     }
 
   })

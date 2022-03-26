@@ -2,6 +2,7 @@
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import React, {useState, useEffect} from 'react';
+import Accordion from 'react-bootstrap/Accordion'
 
 import NavigationBar from '../components/navbar';
 
@@ -20,17 +21,25 @@ function AllPosting({dummydata}){
                 <div key = {xd.date_of_ride}>
                     <p>{xd.date_of_ride}</p>
                     <p>{xd.number_of_seats}</p>
-                    <iframe
-                        width="450"
-                        height="250"
-                        
-                        
-                        src={`https://www.google.com/maps/embed/v1/directions?key=AIzaSyDXYIKlauR9teuVU4RHWACY6T1x_fPbZFY
-                        &origin= ${xd.departure_location}
-                        &destination= ${xd.school_location}`}
-                        
-                    >
-                    </iframe>
+                    
+                    <Accordion>
+                    <Accordion.Item eventKey="0">
+                        <Accordion.Header>View Route</Accordion.Header>
+                            <Accordion.Body>
+                            <iframe
+                                width="450"
+                                height="250"
+                                
+                                
+                                src={`https://www.google.com/maps/embed/v1/directions?key=AIzaSyDXYIKlauR9teuVU4RHWACY6T1x_fPbZFY
+                                &origin= ${xd.departure_location}
+                                &destination= ${xd.school_location}`}
+                                
+                            >
+                            </iframe>
+                            </Accordion.Body>
+                        </Accordion.Item>
+                    </Accordion>
                     <br></br>
                 </div>
             )    
