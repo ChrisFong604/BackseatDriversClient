@@ -2,8 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import NavigationBar from '../components/navbar';
-import react from 'react'
-import { useFormik } from 'formik';
+import { useFormik } from 'formik' 
 
 export default function RiderProfile() {
   
@@ -20,11 +19,11 @@ export default function RiderProfile() {
 
       })
 
-      console.log('form values',formik.values);
 
         
   return (
     
+
   <>  
     <NavigationBar/>
 
