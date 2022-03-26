@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import {useFormik} from 'formik'
+import NavigationBar from './navbar';
 
 export default function Drivers() {
   
@@ -22,7 +23,9 @@ export default function Drivers() {
   
 
   return (
+    
     <>
+      <NavigationBar/>
       <div className={styles.container}>
         <p>THIS PAGE WILL BE FOR POSTING</p>
       </div>

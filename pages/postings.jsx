@@ -3,6 +3,7 @@ import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import React, {useState, useEffect} from 'react';
 
+import NavigationBar from './navbar';
 
 const dummy = [
     {date_of_ride: '2022/09/12', number_of_seats: 2, departure_location: 'V7C2X4', school_location: 'V5A1S6'},
@@ -13,6 +14,7 @@ const dummy = [
 function AllPosting({dummydata}){
     return (
         <>
+            <NavigationBar/>
             {dummydata.map(xd => 
             (
                 <div key = {xd.date_of_ride}>

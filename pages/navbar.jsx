@@ -5,6 +5,8 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {Navbar, Container, Nav} from 'react-bootstrap/'
 
+
+
 export default function NavigationBar() {
   
 
@@ -13,7 +15,7 @@ export default function NavigationBar() {
     <>
         <Navbar bg="dark" variant="dark">
             <Container>
-            <Navbar.Brand href="#home">Navbar</Navbar.Brand>
+            <Navbar.Brand href="/">Backseat Drivers</Navbar.Brand>
             <Nav className="me-auto">
             <Nav.Link href="/drivers">Drivers</Nav.Link>
             <Nav.Link href="#features">Features</Nav.Link>
