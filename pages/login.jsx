@@ -11,22 +11,15 @@ export default function Testing() {
   const [destination, setDestination] = useState('SFU+Burnaby')
 
   return (
+
     <div>
-      <Link href="/" passHref>
+      <Link href="/test2" passHref>
           <button >Sign in</button>
       </Link>
       <div>hello</div>
-      <iframe
-        width="450"
-        height="250"
-        
-        
-        src={`https://www.google.com/maps/embed/v1/directions?key=AIzaSyDXYIKlauR9teuVU4RHWACY6T1x_fPbZFY
-        &origin= ${origin}
-        &destination= ${destination}`}
-        
-      >
-      </iframe>
+
+    
+
     </div>
-  )
+  ) 
 }
