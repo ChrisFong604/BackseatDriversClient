@@ -18,8 +18,8 @@ export default function NavigationBar() {
             <Navbar.Brand href="/">Backseat Drivers</Navbar.Brand>
             <Nav className="me-auto">
             <Nav.Link href="/drivers">Drivers</Nav.Link>
-            <Nav.Link href="/riderProfile">riderProfile</Nav.Link>
-            <Nav.Link href="#pricing">Pricing</Nav.Link>
+            <Nav.Link href="/riderProfile">Profile</Nav.Link>
+            <Nav.Link href="/postings">Postings</Nav.Link>
             </Nav>
             </Container>
         </Navbar>

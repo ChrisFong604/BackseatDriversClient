@@ -112,6 +112,10 @@
   background-color: royalblue;
 }
 
+.profile_but{
+  margin-top: 500px;
+}
+
 @media (max-width: 600px) {
   .grid {
     width: 100%;
