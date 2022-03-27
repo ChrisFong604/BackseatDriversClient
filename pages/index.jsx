@@ -17,7 +17,7 @@ export default function Home() {
 
   return (
     
-    <div className={styles.container}>
+    <>
       <NavigationBar/>
       
       <Head>
@@ -65,6 +65,6 @@ export default function Home() {
           </span>
         </a>
       </footer>
-    </div>
+    </>
   )
 }
