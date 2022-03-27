@@ -64,45 +64,45 @@ export default function Drivers({schools}) {
         <h1>Create Ride</h1>
         <ul>
           <li>
-            <label htmlFor='host_name' style={{fontSize: 20}}>Name of Driver</label>
+            <label htmlFor='host_name' style={{fontSize: 30}}>Name of Driver</label>
             <input type = 'text' id = 'host_name' name = 'host_name' onChange={formik.handleChange} value={formik.values.host_name} placeholder='Your Name'/>
           </li>
           <li>
-            <label htmlFor='phone_number' style={{fontSize: 20}}>Cellphone Number</label>
+            <label htmlFor='phone_number' style={{fontSize: 30}}>Cellphone Number</label>
             <input type = 'text' id = 'phone_number' name = 'phone_number' onChange={formik.handleChange} value={formik.values.phone_number}/>
           </li>
           <li>
-            <label htmlFor='email' style={{fontSize: 20}}>School Associated Email</label>
+            <label htmlFor='email' style={{fontSize: 30}}>School Associated Email</label>
             <input type = 'text' id = 'email' name = 'email' onChange={formik.handleChange} value={formik.values.email}/>
           </li>
           <li>
-            <label htmlFor='description' style={{fontSize: 20}}>Description About Schedule</label>
+            <label htmlFor='description' style={{fontSize: 30}}>Description About Schedule</label>
             <input type = 'text' id = 'description' name = 'description' onChange={formik.handleChange} value={formik.values.description}/>
           </li>
           <li>
-            <label htmlFor='date_of_ride' style={{fontSize: 20}}>Day of the Ride</label>
+            <label htmlFor='date_of_ride' style={{fontSize: 30}}>Day of the Ride</label>
             <input type = 'text' id = 'date_of_ride' name = 'date_of_ride' onChange={formik.handleChange} value={formik.values.date_of_ride} placeholder='yyyy/mm/dd'/>
           </li>
 
-          <li>
-            <label htmlFor="number_of_seats" style={{fontSize: 20}}>Number of seats available</label>
+          <label className ={styles.card}>
+            <label htmlFor="number_of_seats" style={{fontSize: 30}}>Number of seats available</label>
             <input type= 'number' id = 'number_of_seats' name = 'number_of_seats' onChange={formik.handleChange} value={formik.values.number_of_seats}/>
-          </li>
+          </label>
           
-          <li>
-            <label htmlFor='departure_location' style={{fontSize: 20}}>Location of Departure</label>
+          <label className ={styles.card}>
+            <label htmlFor='departure_location' style={{fontSize: 30}}>Location of Departure</label>
             <input type = 'text' id = 'departure_location' name = 'departure_location' onChange={formik.handleChange} value={formik.values.departure_location}/>
-          </li>
+          </label>
 
-          <li>
-            <label htmlFor='school_location' style={{fontSize: 20}} >Location of school</label>
+          <label className = {styles.card}>
+            <label htmlFor='school_location' style={{fontSize: 30}} >Location of school</label>
             <input type = 'text' id = 'school_location' name = 'school_location' onChange={formik.handleChange} value={formik.values.school_location}/>
-          </li>
+          </label>
 
+          <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
+            <button type = 'submit' style={{align: "center"}} >Create</button>
+          </div>
         </ul>
-        <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
-          <button type = 'submit' style={{align: "center"}} >Create</button>
-        </div>
       </form>
       
     </>
