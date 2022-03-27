@@ -5,11 +5,12 @@ import React, {useState, useEffect} from 'react';
 import Accordion from 'react-bootstrap/Accordion'
 
 import NavigationBar from '../components/navbar';
+import Link from 'next/link';
 
 const dummy = [
-    {date_of_ride: '2022/09/12', number_of_seats: 2, departure_location: 'V7C2X4', school_location: 'V5A1S6'},
-    {date_of_ride: '2024/01/16', number_of_seats: 4, departure_location: 'V3J7Y5', school_location: 'V5A1S6'},
-    {date_of_ride: '2022/04/23', number_of_seats: 1, departure_location: 'V3J7Y5', school_location: 'V5A1S6'},
+    {date_of_ride: '2022/09/12', number_of_seats: 2, departure_location: 'V7C2X4', school_location: 'V5A1S6', ride_id: '5'},
+    {date_of_ride: '2024/01/16', number_of_seats: 4, departure_location: 'V3J7Y5', school_location: 'V5A1S6', ride_id: '6'},
+    {date_of_ride: '2022/04/23', number_of_seats: 1, departure_location: 'V3J7Y5', school_location: 'V5A1S6', ride_id: '9'},
 ]
 
 function AllPosting({dummydata}){
@@ -40,6 +41,9 @@ function AllPosting({dummydata}){
                             </Accordion.Body>
                         </Accordion.Item>
                     </Accordion>
+                    <Link href = {'/rideDetails/' + xd.ride_id} as = {"rideDetails/" + xd.ride_id}>
+                        <button>View ride</button>
+                    </Link>
                     <br></br>
                 </div>
             )    
