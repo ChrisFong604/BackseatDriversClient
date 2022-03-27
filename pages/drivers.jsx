@@ -21,29 +21,33 @@ export async function getServerSideProps() {
   return { props: { schools: data } };
 }
 
+/*
+  host_name?: string;
+  phone_number?: string;
+  email?: string;
+  description?: string;
+  date_of_ride: string;
+  number_of_seats: number;
+  departure_location: string;
+  school_location: string;
 
+*/
 export default function Drivers({schools}) {
   console.log(schools)
   const formik = useFormik({
 
     initialValues: {
       date_of_ride: '',
-      number_of_seats: 0,
+      number_of_seats: '',
       departure_location: '',
-      school_location: ''
+      school_location: '',
+      host_name: '',
+      phone_number: '',
+      email: '',
+      description: '',
     },
     onSubmit: values => {
       console.log('Form data', values)
-    },
-    validate: values => {
-      let errors = {}
-      if (!values.date_of_ride){
-        errors.date_of_ride = 'Required'
-      }
-      if (!values.number_of_seats){
-        errors.number_of_seats = 'Required'
-      }
-
     }
 
   })
@@ -59,6 +63,22 @@ export default function Drivers({schools}) {
       <form className = {styles.formtemplate} onSubmit={formik.handleSubmit}>
         <h1>Create Ride</h1>
         <ul>
+          <li>
+            <label htmlFor='host_name' style={{fontSize: 20}}>Name of Driver</label>
+            <input type = 'text' id = 'host_name' name = 'host_name' onChange={formik.handleChange} value={formik.values.host_name} placeholder='Your Name'/>
+          </li>
+          <li>
+            <label htmlFor='phone_number' style={{fontSize: 20}}>Cellphone Number</label>
+            <input type = 'text' id = 'phone_number' name = 'phone_number' onChange={formik.handleChange} value={formik.values.phone_number}/>
+          </li>
+          <li>
+            <label htmlFor='email' style={{fontSize: 20}}>School Associated Email</label>
+            <input type = 'text' id = 'email' name = 'email' onChange={formik.handleChange} value={formik.values.email}/>
+          </li>
+          <li>
+            <label htmlFor='description' style={{fontSize: 20}}>Description About Schedule</label>
+            <input type = 'text' id = 'description' name = 'description' onChange={formik.handleChange} value={formik.values.description}/>
+          </li>
           <li>
             <label htmlFor='date_of_ride' style={{fontSize: 20}}>Day of the Ride</label>
             <input type = 'text' id = 'date_of_ride' name = 'date_of_ride' onChange={formik.handleChange} value={formik.values.date_of_ride} placeholder='yyyy/mm/dd'/>

@@ -23,12 +23,14 @@ export async function getServerSideProps() {
 function AllPosting({dummydata}){
     return (
         <>
-            <NavigationBar/>
+            
             {dummydata.map(xd => 
-            (
-                <div key = {xd.date_of_ride}>
+            (   <li key = {xd.date_of_ride}>
+                <div >
+                    <p> Destination: {xd.school_location}</p>
                     <p> Date of ride: {xd.date_of_ride}</p>
                     <p> Number of seats: {xd.number_of_seats}</p>
+                    <p> Name of driver: {xd.host_name}</p>
                     
                     <Accordion>
                     <Accordion.Item eventKey="0">
@@ -49,10 +51,11 @@ function AllPosting({dummydata}){
                         </Accordion.Item>
                     </Accordion>
                     <Link href = {'/rideDetails/' + xd.ride_id} as = {"rideDetails/" + xd.ride_id}>
-                        <button>View ride</button>
+                        <button>View more</button>
                     </Link>
                     <br></br>
                 </div>
+                </li>
             )    
             )}
         </>
@@ -67,8 +70,10 @@ export default function Postings({rides}) {
     return (
     
         <>
-        <AllPosting dummydata = {rides}/>
-        
+        <NavigationBar/>
+        <ul className = {styles.postingstemplate}>
+            <AllPosting dummydata = {rides}/>
+        </ul>
         
         </>
   )
