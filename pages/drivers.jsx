@@ -61,41 +61,41 @@ export default function Drivers({schools}) {
      
       
       <form className = {styles.formtemplate} onSubmit={formik.handleSubmit}>
-        <h1>Create Ride</h1>
+        <h1 style={{fontSize:35}}>Create Ride</h1>
         <ul>
-          <li>
-            <label htmlFor='host_name' style={{fontSize: 30}}>Name of Driver</label>
+        <label className ={styles.card}>
+            <label htmlFor='host_name' style={{fontSize: 25}}>Name of Driver</label>
             <input type = 'text' id = 'host_name' name = 'host_name' onChange={formik.handleChange} value={formik.values.host_name} placeholder='Your Name'/>
-          </li>
-          <li>
-            <label htmlFor='phone_number' style={{fontSize: 30}}>Cellphone Number</label>
+            </label>
+          <label className ={styles.card}>
+            <label htmlFor='phone_number' style={{fontSize: 25}}>Cellphone Number</label>
             <input type = 'text' id = 'phone_number' name = 'phone_number' onChange={formik.handleChange} value={formik.values.phone_number}/>
-          </li>
-          <li>
-            <label htmlFor='email' style={{fontSize: 30}}>School Associated Email</label>
+            </label>
+          <label className ={styles.card}>
+            <label htmlFor='email' style={{fontSize: 25}}>School Associated Email</label>
             <input type = 'text' id = 'email' name = 'email' onChange={formik.handleChange} value={formik.values.email}/>
-          </li>
-          <li>
-            <label htmlFor='description' style={{fontSize: 30}}>Description About Schedule</label>
+            </label>
+          <label className ={styles.card}>
+            <label htmlFor='description' style={{fontSize: 25}}>Description About Schedule</label>
             <input type = 'text' id = 'description' name = 'description' onChange={formik.handleChange} value={formik.values.description}/>
-          </li>
-          <li>
-            <label htmlFor='date_of_ride' style={{fontSize: 30}}>Day of the Ride</label>
+            </label>
+          <label className ={styles.card}>
+            <label htmlFor='date_of_ride' style={{fontSize: 25}}>Day of the Ride</label>
             <input type = 'text' id = 'date_of_ride' name = 'date_of_ride' onChange={formik.handleChange} value={formik.values.date_of_ride} placeholder='yyyy/mm/dd'/>
-          </li>
+            </label>
 
           <label className ={styles.card}>
-            <label htmlFor="number_of_seats" style={{fontSize: 30}}>Number of seats available</label>
+            <label htmlFor="number_of_seats" style={{fontSize: 25}}>Number of seats available</label>
             <input type= 'number' id = 'number_of_seats' name = 'number_of_seats' onChange={formik.handleChange} value={formik.values.number_of_seats}/>
           </label>
           
           <label className ={styles.card}>
-            <label htmlFor='departure_location' style={{fontSize: 30}}>Location of Departure</label>
+            <label htmlFor='departure_location' style={{fontSize: 25}}>Location of Departure</label>
             <input type = 'text' id = 'departure_location' name = 'departure_location' onChange={formik.handleChange} value={formik.values.departure_location}/>
           </label>
 
           <label className = {styles.card}>
-            <label htmlFor='school_location' style={{fontSize: 30}} >Location of school</label>
+            <label htmlFor='school_location' style={{fontSize: 25}} >Location of school</label>
             <input type = 'text' id = 'school_location' name = 'school_location' onChange={formik.handleChange} value={formik.values.school_location}/>
           </label>
 
