@@ -23,6 +23,7 @@ function AllPosting({dummydata}){
             {dummydata.map(xd => 
             (   <li key = {xd.date_of_ride}>
                 <div >
+                    <p> Departure Location: {xd.departure_location}</p>
                     <p> Destination: {xd.school_location}</p>
                     <p> Date of ride: {xd.date_of_ride}</p>
                     <p> Number of seats: {xd.number_of_seats}</p>
