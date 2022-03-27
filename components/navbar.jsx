@@ -19,7 +19,7 @@ export default function NavigationBar() {
             <Nav className="me-auto">
             <Nav.Link href="/drivers">Drivers</Nav.Link>
             <Nav.Link href="/riderProfile">Profile</Nav.Link>
-            <Nav.Link href="/postings">Postings</Nav.Link>
+            <Nav.Link href="postings">Postings</Nav.Link>
             </Nav>
             </Container>
         </Navbar>

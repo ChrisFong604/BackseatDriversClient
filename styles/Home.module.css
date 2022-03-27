@@ -112,8 +112,11 @@
   background-color: royalblue;
 }
 
-.profile_but{
-  margin-top: 500px;
+.form_button{
+  margin-top: 10%;
+  align-items: center;
+  border: 1px solid;
+  color: black; 
 }
 
 @media (max-width: 600px) {
@@ -122,3 +125,4 @@
     flex-direction: column;
   }
 }
+
