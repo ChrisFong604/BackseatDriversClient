@@ -7,11 +7,7 @@ import Accordion from 'react-bootstrap/Accordion'
 import NavigationBar from '../components/navbar';
 import Link from 'next/link';
 
-const dummy = [
-    {date_of_ride: '2022/09/12', number_of_seats: 2, departure_location: 'V7C2X4', school_location: 'V5A1S6', ride_id: '1'},
-    {date_of_ride: '2024/01/16', number_of_seats: 4, departure_location: 'V3J7Y5', school_location: 'V5A1S6', ride_id: '6'},
-    {date_of_ride: '2022/04/23', number_of_seats: 1, departure_location: 'V3J7Y5', school_location: 'V5A1S6', ride_id: '9'},
-]
+
 
 export async function getServerSideProps() {
     const res = await fetch("http://localhost:5000/api/rides/all")
@@ -27,6 +23,7 @@ function AllPosting({dummydata}){
             {dummydata.map(xd => 
             (   <li key = {xd.date_of_ride}>
                 <div >
+                    <p> Departure Location: {xd.departure_location}</p>
                     <p> Destination: {xd.school_location}</p>
                     <p> Date of ride: {xd.date_of_ride}</p>
                     <p> Number of seats: {xd.number_of_seats}</p>
@@ -51,7 +48,7 @@ function AllPosting({dummydata}){
                         </Accordion.Item>
                     </Accordion>
                     <Link href = {'/rideDetails/' + xd.ride_id} as = {"rideDetails/" + xd.ride_id}>
-                        <button>View more</button>
+                        <button className = {styles.postbutton}>View more</button>
                     </Link>
                     <br></br>
                 </div>

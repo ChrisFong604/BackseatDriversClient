@@ -12,19 +12,19 @@ export default function NavigationBar() {
 				<Container>
 					<Navbar.Brand href="/">
 						{" "}
-						<h2 style={{ marginLeft: -185 }}>Backseat Drivers</h2>
+						<h2 style={{ marginLeft: 520 }}>Backseat Drivers</h2>
 					</Navbar.Brand>
 					<Nav className="me-auto">
 						<Nav.Link
 							href="/create-ride"
-							style={{ paddingLeft: 100, paddingRight: 100 }}
+							style={{ marginLeft: 350 }}
 						>
-							<h4>Create</h4>
+							<h4>Create </h4>
 						</Nav.Link>
-						<Nav.Link href="/postings" style={{ marginLeft: 40 }}>
+						<Nav.Link href="postings" style={{ marginLeft: 75 }}>
 							<h4>Postings</h4>
 						</Nav.Link>
-						<Nav.Link href="/riderProfile" style={{ marginLeft: 900 }}>
+						<Nav.Link href="/riderProfile" style={{ marginLeft: 75}}>
 							<h4>Profile</h4>
 						</Nav.Link>
 					</Nav>

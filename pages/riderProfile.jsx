@@ -4,6 +4,9 @@ import styles from '../styles/Home.module.css'
 import NavigationBar from '../components/navbar';
 import { useFormik } from 'formik' 
 
+
+
+
 export default function RiderProfile() {
 
       const formik = useFormik({
