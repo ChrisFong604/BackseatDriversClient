@@ -55,10 +55,10 @@ export default function Drivers({schools}) {
         <label htmlFor="number_of_seats">Number of seats available</label>
         <input type= 'number' id = 'number_of_seats' name = 'number_of_seats' onChange={formik.handleChange} value={formik.values.number_of_seats}/>
 
-        <label htmlFor='departure_location'>Location of Departure</label>
+        <label htmlFor='departure_location'>Departure_Location</label>
         <input type = 'text' id = 'departure_location' name = 'departure_location' onChange={formik.handleChange} value={formik.values.departure_location}/>
         
-        <label htmlFor='school_location'>School Location</label>
+        <label htmlFor='school_location'>School_Location</label>
         <input type = 'text' id = 'school_location' name = 'school_location' onChange={formik.handleChange} value={formik.values.school_location}></input>
 
         <button type = 'submit'>Submit</button>

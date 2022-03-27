@@ -5,6 +5,7 @@ import NavigationBar from '../components/navbar';
 import { useFormik } from 'formik' 
 import { textAlign } from '@mui/system';
 import { Grid3x3Sharp } from '@mui/icons-material';
+import React from 'react'
 
 export default function RiderProfile() {
 
@@ -28,10 +29,8 @@ export default function RiderProfile() {
   <> 
     <NavigationBar/>
     <div className = {styles.title}>
-      <h1>Edit your Profile</h1>
+      <h1>Your Profile</h1>
     </div>
-
-
 
       <main className = {styles.main}>
 
@@ -40,7 +39,7 @@ export default function RiderProfile() {
           
         </p>    
       <form  id = "myform" className= {styles.grid} onSubmit = {formik.handleSubmit}>
-        <span>
+          <span>
           <div className = {styles.card}>
           <label htmlFor='email'>E-mail </label>
           <input className = {styles.card} type='text' id='email' name='email' onChange={formik.handleChange} value={formik.values.email}/>

@@ -2,15 +2,13 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import Link from "next/link";
-
+import React from 'react'
 import Testing from './login'
 
 export default function Home() {
   
-
-
   return (
-    
+  
     <div className={styles.container}>
       
       <Testing/>
@@ -26,8 +24,7 @@ export default function Home() {
         </h1>
 
         <p className={styles.description}>
-          Get started by editing{' '}
-          
+          Get started!        
         </p>
 
         <div className={styles.grid}>

@@ -7,6 +7,7 @@ import Link from "next/link";
 import NavigationBar from '../components/navbar';
 import 'bootstrap/dist/css/bootstrap.css'
 import { Nav, Navbar, NavDropdown } from 'react-bootstrap'
+import React from 'react'
 
 import Testing from './login'
 
@@ -26,46 +27,28 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        
-
-
 
         <h1 className={styles.title}>
           Welcome to Backseat Drivers!
         </h1>
 
         <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
+          Get started!
+          <code className={styles.container}></code>
         </p>
 
         <div className={styles.grid}>
           <a href="/drivers" className={styles.card}>
-            <h2>Drivers (Post Ride) &rarr;</h2>
+            <h2>Post a Ride</h2>
             <p>Click here to post a ride!</p>
           </a>
-
-          <a href="/riderProfile" className={styles.card}>
-            <h2>Profile (Rider Profile) &rarr;</h2>
-            <p>Click here to edit your profile!</p>
-          </a>
-
+          
           <a
             href="/postings"
             className={styles.card}
           >
-            <h2>Ride Postings &rarr;</h2>
-            <p>Click here to view all postings!</p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h2>Deploy &rarr;</h2>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
+            <h2>Find a Ride</h2>
+            <p>Click here to find a ride!</p>
           </a>
         </div>
       </main>
