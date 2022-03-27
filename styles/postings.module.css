@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand");
+.main_container {
+	display: grid;
+	place-items: center;
+	grid-template-columns: 7, 5, 7;
+	margin-top: 60px;
+	padding: 30px;
+	font-family: "Quicksand", monospace;
+}
+
+.opposite_text {
+	padding: 10px;
+	display: flex;
+	justify-content: space-between;
+}
+.opposite_text .info {
+	background-color: rgb(73, 73, 73);
+	color: antiquewhite;
+	border-radius: 5px;
+	padding-left: 9px;
+	padding-right: 9px;
+	padding-top: 6px;
+	padding-bottom: 6px;
+}
+
+.main_container .host_name {
+	text-align: center;
+}
+
+.main_container .middle_column {
+	padding: 40px;
+	border: 3px solid rgb(179, 179, 179);
+	border-radius: 4px;
+}
+
+.main_container .map {
+	display: flex;
+	margin: auto;
+	margin-top: 15px;
+	margin-bottom: 15px;
+	padding: auto;
+	border: 2px solid rgb(151, 151, 151);
+	border-radius: 4px;
+}
+
+.description {
+	border: 1px solid rgb(151, 151, 151);
+	border-radius: 3px;
+	padding: 15px;
+	margin-top: 15px;
+	margin-bottom: 15px;
+	min-height: 75px;
+}
+.contact_info {
+	display: grid;
+	grid-template-columns: 1, 1;
+	columns: auto;
+}
+
+.contact_info > * {
+	text-align: right;
+}
+
+.details {
+	text-align: left;
+}
+
+.contact_header {
+	text-align: center;
+	background-color: rgb(73, 73, 73);
+	color: antiquewhite;
+	border-radius: 5px;
+	padding-left: 9px;
+	padding-right: 9px;
+	padding-top: 6px;
+	padding-bottom: 6px;
+}

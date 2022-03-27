@@ -75,6 +75,7 @@ export default function CreateRide({ schools }) {
 
 			<form className={styles.formtemplate} onSubmit={formik.handleSubmit}>
 				<h1>Create Ride</h1>
+				<hr style={{ paddingLeft: 10, paddingRight: 10 }}></hr>
 				<ul className={styles.formInputs}>
 					<li>
 						<input
@@ -165,9 +166,8 @@ export default function CreateRide({ schools }) {
 							justifyContent: "center",
 							alignItems: "center",
 						}}
-					>	
-						
-						<button type="submit" style={{ align: "center" }}>
+					>
+						<button type="submit" className={styles.submit_button}>
 							Create
 						</button>
 					</div>
