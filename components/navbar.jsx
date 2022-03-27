@@ -19,9 +19,9 @@ export default function NavigationBar() {
 							href="/create-ride"
 							style={{ paddingLeft: 100, paddingRight: 100 }}
 						>
-							<h4>Create Ride</h4>
+							<h4>Create</h4>
 						</Nav.Link>
-						<Nav.Link href="postings" style={{ marginLeft: 40 }}>
+						<Nav.Link href="/postings" style={{ marginLeft: 40 }}>
 							<h4>Postings</h4>
 						</Nav.Link>
 						<Nav.Link href="/riderProfile" style={{ marginLeft: 900 }}>
