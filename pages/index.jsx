@@ -9,7 +9,7 @@ import 'bootstrap/dist/css/bootstrap.css'
 import { Nav, Navbar, NavDropdown } from 'react-bootstrap'
 import React from 'react'
 
-import Testing from './login'
+
 
 export default function Home() {
   
