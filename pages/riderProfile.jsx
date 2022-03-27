@@ -57,9 +57,7 @@ export default function RiderProfile() {
           <label htmlFor='text'>Departure_Location</label>
           <input className = {styles.card} type='text' id='text' name="departure_location" onChange = {formik.handleChange} value ={formik.values.departure_location}/>  
           </div>   
-          
-          
-          
+        
           </span>
 
       </form>
@@ -67,6 +65,7 @@ export default function RiderProfile() {
           <p className = {styles.form_button}>
           <button form = "myform" className = {styles.container} type="submit" > Save </button>
           </p>
+
  
       </main>
   </>
