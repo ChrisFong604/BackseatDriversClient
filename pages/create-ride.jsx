@@ -5,7 +5,8 @@ import { useFormik } from "formik";
 import NavigationBar from "../components/navbar";
 import { redirect } from "next/dist/server/api-utils";
 import { NextResponse } from "next/dist/server/web/spec-extension/response";
-
+import Link from "next/link";
+import {useRouter} from 'next/router'
 /*
 await fetch("http://localhost:5000/api/driver/create/${id}", {
                 method: "POST",
@@ -33,7 +34,17 @@ export async function getServerSideProps() {
   school_location: string;
 
 */
+/*
+function Redirect(){
+
+	const router = useRouter()
+	router.push('/')
+  
+  }
+*/
 export default function CreateRide({ schools }) {
+	const router = useRouter()
+	
 	const formik = useFormik({
 		initialValues: {
 			date_of_ride: "",
@@ -54,7 +65,7 @@ export default function CreateRide({ schools }) {
 				body: JSON.stringify(values, null, 2),
 			})
 				.catch(console.error)
-				.then(NextResponse.redirect("/home"));
+				.then(router.push('/'));
 		},
 	});
 

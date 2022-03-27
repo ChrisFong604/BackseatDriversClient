@@ -13,7 +13,7 @@ export default function Home() {
 
 
   return (
-      <>
+      <body className={styles.gradient}>
       <NavigationBar/>
       
       <Head>
@@ -53,6 +53,6 @@ export default function Home() {
         </div>
       </main>
 
-    </>
+    </body>
   )
 }
