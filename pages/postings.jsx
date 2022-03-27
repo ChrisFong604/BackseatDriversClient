@@ -60,7 +60,6 @@ export default function Postings() {
     return (
     
         <div className={styles.container}>
-        <p>THIS PAGE WILL BE TO VIEW ALL LISTINGS</p>
         <AllPosting dummydata = {dummy}/>
         
         </div>

@@ -112,9 +112,17 @@
   background-color: royalblue;
 }
 
+.form_button{
+  margin-top: 10%;
+  align-items: center;
+  border: 1px solid;
+  color: black; 
+}
+
 @media (max-width: 600px) {
   .grid {
     width: 100%;
     flex-direction: column;
   }
 }
+
