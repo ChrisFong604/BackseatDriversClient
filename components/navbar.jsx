@@ -15,11 +15,11 @@ export default function NavigationBar() {
     <>
         <Navbar bg="dark" variant="dark">
             <Container>
-            <Navbar.Brand href="/">Backseat Drivers</Navbar.Brand>
+            <Navbar.Brand href="/"> <h2 style = {{marginLeft:-185}}>Backseat Drivers</h2></Navbar.Brand>
             <Nav className="me-auto">
-            <Nav.Link href="/drivers" style = {{marginLeft: 20}}>Drivers</Nav.Link>
-            <Nav.Link href="/riderProfile">Profile</Nav.Link>
-            <Nav.Link href="postings">Postings</Nav.Link>
+            <Nav.Link href="/drivers" style = {{marginLeft: 100}}><h4>Drivers</h4></Nav.Link>
+            <Nav.Link href="postings" style = {{marginLeft: 40}}><h4>Postings</h4></Nav.Link>
+            <Nav.Link href="/riderProfile" style = {{marginLeft: 900}}><h4>Profile</h4></Nav.Link>
             </Nav>
             </Container>
         </Navbar>
