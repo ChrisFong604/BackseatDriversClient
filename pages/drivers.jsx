@@ -55,31 +55,28 @@ export default function Drivers({schools}) {
     <>
       <NavigationBar/>
      
-      
-      <form className = {styles.formtemplate} onSubmit={formik.handleSubmit}>
-        <h1>Create Ride</h1>
-        <ul>
-          <li>
+      <h1 align="center">Create A Ride</h1> 
+      <form className= {styles.main} onSubmit={formik.handleSubmit} >
+          <label className = {styles.card}>
             <label htmlFor='date_of_ride' style={{fontSize: 20}}>Day of the Ride</label>
             <input type = 'text' id = 'date_of_ride' name = 'date_of_ride' onChange={formik.handleChange} value={formik.values.date_of_ride} placeholder='yyyy/mm/dd'/>
-          </li>
+          </label>
 
-          <li>
+          <label className ={styles.card}>
             <label htmlFor="number_of_seats" style={{fontSize: 20}}>Number of seats available</label>
             <input type= 'number' id = 'number_of_seats' name = 'number_of_seats' onChange={formik.handleChange} value={formik.values.number_of_seats}/>
-          </li>
+          </label>
           
-          <li>
+          <label className ={styles.card}>
             <label htmlFor='departure_location' style={{fontSize: 20}}>Location of Departure</label>
             <input type = 'text' id = 'departure_location' name = 'departure_location' onChange={formik.handleChange} value={formik.values.departure_location}/>
-          </li>
+          </label>
 
-          <li>
+          <label className = {styles.card}>
             <label htmlFor='school_location' style={{fontSize: 20}} >Location of school</label>
             <input type = 'text' id = 'school_location' name = 'school_location' onChange={formik.handleChange} value={formik.values.school_location}/>
-          </li>
+          </label>
 
-        </ul>
         <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
           <button type = 'submit' style={{align: "center"}} >Create</button>
         </div>
