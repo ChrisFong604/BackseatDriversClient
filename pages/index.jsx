@@ -8,7 +8,7 @@ import NavigationBar from '../components/navbar';
 import 'bootstrap/dist/css/bootstrap.css'
 import { Nav, Navbar, NavDropdown } from 'react-bootstrap'
 
-import Testing from './login'
+
 
 export default function Home() {
   

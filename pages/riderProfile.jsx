@@ -3,8 +3,8 @@ import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import NavigationBar from '../components/navbar';
 import { useFormik } from 'formik' 
-import { textAlign } from '@mui/system';
-import { Grid3x3Sharp } from '@mui/icons-material';
+
+
 
 export default function RiderProfile() {
 
@@ -59,8 +59,11 @@ export default function RiderProfile() {
           </div>
           <div className = {styles.card}>
           <label htmlFor='text'>Departure_Location</label>
-          <input className = {styles.card} type='text' id='text' name="departure_location" onChange = {formik.handleChange} value ={formik.values.departure_location}/>     
-          </div>
+          <input className = {styles.card} type='text' id='text' name="departure_location" onChange = {formik.handleChange} value ={formik.values.departure_location}/>  
+          </div>   
+          
+          
+          
           </span>
 
       </form>

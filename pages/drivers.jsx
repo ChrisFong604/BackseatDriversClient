@@ -4,8 +4,17 @@ import styles from '../styles/Home.module.css'
 import {useFormik} from 'formik'
 import NavigationBar from '../components/navbar';
 
-
+/*
+await fetch("http://localhost:5000/api/driver/create/${id}", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(values, null, 2),
+            }).catch(console.error);
+*/
 export async function getServerSideProps() {
+
   const res = await fetch("http://localhost:5000/api/user")
   const data = await res.json();
 
@@ -45,23 +54,35 @@ export default function Drivers({schools}) {
     
     <>
       <NavigationBar/>
-      <div className={styles.container}>
-        <p>THIS PAGE WILL BE FOR POSTING</p>
-      </div>
-      <form className = {styles.drivers_form} onSubmit={formik.handleSubmit}>
-        <label htmlFor='date_of_ride'>Date</label>
-        <input type = 'text' id = 'date_of_ride' name = 'date_of_ride' onChange={formik.handleChange} value={formik.values.date_of_ride} placeholder='yyyy/mm/dd'></input>
+     
+      
+      <form className = {styles.formtemplate} onSubmit={formik.handleSubmit}>
+        <h1>Create Ride</h1>
+        <ul>
+          <li>
+            <label htmlFor='date_of_ride' style={{fontSize: 20}}>Day of the Ride</label>
+            <input type = 'text' id = 'date_of_ride' name = 'date_of_ride' onChange={formik.handleChange} value={formik.values.date_of_ride} placeholder='yyyy/mm/dd'/>
+          </li>
 
-        <label htmlFor="number_of_seats">Number of seats available</label>
-        <input type= 'number' id = 'number_of_seats' name = 'number_of_seats' onChange={formik.handleChange} value={formik.values.number_of_seats}/>
+          <li>
+            <label htmlFor="number_of_seats" style={{fontSize: 20}}>Number of seats available</label>
+            <input type= 'number' id = 'number_of_seats' name = 'number_of_seats' onChange={formik.handleChange} value={formik.values.number_of_seats}/>
+          </li>
+          
+          <li>
+            <label htmlFor='departure_location' style={{fontSize: 20}}>Location of Departure</label>
+            <input type = 'text' id = 'departure_location' name = 'departure_location' onChange={formik.handleChange} value={formik.values.departure_location}/>
+          </li>
 
-        <label htmlFor='departure_location'>Location of Departure</label>
-        <input type = 'text' id = 'departure_location' name = 'departure_location' onChange={formik.handleChange} value={formik.values.departure_location}/>
-        
-        <label htmlFor='school_location'>School Location</label>
-        <input type = 'text' id = 'school_location' name = 'school_location' onChange={formik.handleChange} value={formik.values.school_location}></input>
+          <li>
+            <label htmlFor='school_location' style={{fontSize: 20}} >Location of school</label>
+            <input type = 'text' id = 'school_location' name = 'school_location' onChange={formik.handleChange} value={formik.values.school_location}/>
+          </li>
 
-        <button type = 'submit'>Submit</button>
+        </ul>
+        <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
+          <button type = 'submit' style={{align: "center"}} >Create</button>
+        </div>
       </form>
       
     </>
