@@ -6,13 +6,13 @@ import React, {useState, useEffect} from 'react';
 
 
 export async function getServerSideProps() {
-    const res = await fetch("http://localhost:5000/api/user")
+    const res = await fetch("http://localhost:5000/api/rides/all")
     const data = await res.json();
     console.log(data)
-    return { props: { schools: data } };
+    return { props: { rides: data } };
 }
 
-
+/*
 export function Testing(props) {
 
     //console.log("this is schools2" , props)
@@ -38,12 +38,12 @@ export function Testing(props) {
     
 }
     
+*/
 
-
-export default function Drivers({schools}) {
+export default function Drivers({rides}) {
     
-    console.log("this is schools", schools)
-    console.log(schools[0].address)
+    console.log("this is rides", rides)
+    //console.log(schools[0].address)
     const router = useRouter();
 
     
@@ -55,19 +55,21 @@ export default function Drivers({schools}) {
     console.log(a)
     console.log(a['rideId'])
     let b = 0;
-    for (let i = 0; i < schools.length; i++){
-        if (a['rideId'] == schools[i].id){
+    let c = 0;
+    for (let i = 0; i < rides.length; i++){
+        if (a['rideId'] == rides[i].ride_id){
             console.log("HOOORAY")
-            b = schools[i].school_name
-            
+            b = rides[i].number_of_seats
+            c = rides[i].school_location
         }
     }
     
     return (
       
       <>
-        <p>{b}</p>
-        <Testing  message = 'have fun' />
+        <p>There are this number of seats on the ride: {b}</p>
+        <p>Here is the school location: {c} </p>
+        
             
         
         
