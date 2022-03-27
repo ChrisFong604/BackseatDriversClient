@@ -73,29 +73,25 @@ export default function Drivers({ rides }) {
 			<NavigationBar />
 			<div className={styles.main_container}>
 				<div className={styles.middle_column}>
-					<h3>{name}'s Carpool</h3>
-					<hr></hr>
-					<div>
-						<p>
-							<h6>{seats}</h6> available seats
-						</p>
-						<p>
-							<h6>{sloc}</h6> is the destination
-						</p>
+					<h1 className={styles.host_name}>{name}'s Carpool</h1>
+					<div className={styles.opposite_text}>
+						<h4 className={styles.info}>{seats} available seats</h4>
+						<h4 className={styles.info}>{sloc}</h4>
 					</div>
-					<p>{desc}</p>
 
-					<hr></hr>
+					<h6 className={styles.description}>{desc}</h6>
 
-					<span className={styles.contact_info}>
+					<h4 className={styles.contact_header}>Contact</h4>
+
+					<div className={styles.opposite_text}>
 						<h5>{phone}</h5>
 						<h5>{email}</h5>
-					</span>
+					</div>
 
 					<iframe
 						className={styles.map}
-						width="450"
-						height="250"
+						width="810"
+						height="450"
 						src={`https://www.google.com/maps/embed/v1/directions?key=AIzaSyDXYIKlauR9teuVU4RHWACY6T1x_fPbZFY
             &origin= ${start}
             &destination= ${dest}`}
