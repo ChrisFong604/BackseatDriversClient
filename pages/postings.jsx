@@ -66,10 +66,10 @@ export default function Postings({rides}) {
     const [destination, setDestination] = useState('SFU+Burnaby')
     return (
     
-        <div className={styles.container}>
+        <>
         <AllPosting dummydata = {rides}/>
         
         
-        </div>
+        </>
   )
 }
